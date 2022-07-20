@@ -40,14 +40,19 @@ img{
   transition: .8s;
 }
 
+
+
 .birthdayCard:hover {
-	transform: perspective(2500px) rotate(1deg);
+	transform: perspective(2500px) rotate(1deg) translateX(100px);
 	box-shadow: inset 100px 20px 100px rgba(0,0,0,.15), 0 10px 100px rgba(0,0,0,0.3);
 }
 
 .birthdayCard:hover  .cardFront{
   transform: rotateY(-180deg); 
   transition: .8s;
+}
+.cardInside:hover .CardFront_back{
+  display: none;
 }
 .birthdayCard:hover .CardFront_back{
   transition: .8s;
@@ -72,15 +77,40 @@ img{
   display: none;
 }
 
+
 .cardFront,.CardFront_back {
   position: absolute;
   background-color: #fff;
   width: 250px;
   height:350px;
-  overflow: hidden;
+  
   transform-origin: left;
   box-shadow: inset 100px 20px 100px rgba(0,0,0,.13), 30px 0 50px rgba(0,0,0,0.1);
   transition: .8s;
+}
+.cardFront{
+  overflow:hidden;
+}
+.CardFront_back{
+  overflow:visible;
+}
+.pics:hover {
+  transform: scale(3);
+  z-index: 1;
+  position: absolute;
+  top: 50%;
+  left: -10%;
+}
+
+
+.cardInside:hover {
+  transform: perspective(0px) scale(1.25) translateX(-80px);
+  z-index: 1;
+}
+
+
+.cardInside:hover .cardFront{
+  display: none;
 }
 img{
   max-width: 100%;
