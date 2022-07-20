@@ -16,9 +16,21 @@ body {
   transition: 4s;
   transition: all 1s;
 }
-
+.pics{
+  width: 40%;
+  height: 40%;
+}
 img{
   transform: scaleX(-1);
+}
+
+.images{
+  height: 87.5%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding-top: 5%;
+  padding-bottom: 5%;
 }
 
 .CardFront_back{
